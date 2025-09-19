@@ -1,2 +1,3 @@
-class = "pomodoro"
-print(class)
+a = "pedro" 
+b = 10
+print(a:b)
