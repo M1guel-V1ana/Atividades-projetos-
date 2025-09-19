@@ -17,7 +17,7 @@ def dry(self, amount: int) -> None:
     self.wetness += amount
     if self.wetness > self.getMaxwetness():
         print("toalha encharcada")
-    self.wetness = self.getMaxwetness()
+        self.wetness = self.getMaxwetness()
 
 def wringOut(self) -> None:
     self.wetness = 0
