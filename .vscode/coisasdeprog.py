@@ -3,7 +3,7 @@ class Carro:
         self.modelo = modelo
         self.cor = cor
         self.rodas = rodas
-------------------
+
     def Andar(self):
         print("estou andando pela rua")
 
