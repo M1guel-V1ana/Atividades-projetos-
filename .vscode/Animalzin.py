@@ -1,8 +1,8 @@
 class Animal:
-    def __init__(self, specie: str, sound: str):  # construtor
+    def __init__(self, specie: str, sound: str, age : int ):# construtor
         self.specie: str = specie
         self.sound: str = sound
-        self.age: int = 0
+        self.age: int = age
 
     def __str__(self) -> str:  # toString
         return f"{self.specie}:{self.age}:{self.sound}"
@@ -30,7 +30,7 @@ class Animal:
 
 
 def main():
-    animal: Animal = Animal("", "")
+    animal: Animal = Animal("", "", "")
     while True:
 
         line: str = input()
@@ -42,11 +42,13 @@ def main():
         if args[0] == "init":
             specie: str = args[1]
             sound: str = args[2]
-            animal = Animal(specie, sound)
+            age : int = int(args[3])
+            animal = Animal(specie, sound, age)
         if args[0] == "show":
             print(animal)
         if args[0] == "grow":
-            increment: int = int(args[1])
+            #increment: int = int(args[1])
+            increment : int = int(args[1])
             animal.ageBy(increment)
         if args[0] == "noise":
             print(animal.ismakeSound())
