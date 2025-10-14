@@ -1,38 +1,42 @@
 class Pessoa:
-    def __init__(self, nome : str):
-        self.nome = nome
+    def __init__(self, nome: str):
+        self.__nome = nome
+
+    def get_nome(self):
+        return self.__nome
+
+    def set_nome(self, value: str):
+        self.__nome = value
 
     def __str__(self):
-        return self.nome
+        return self.__nome
 
 
 class Moto:
-    def __init__(self):
-        self.pessoa : Pessoa | None = None #deixa explicito que não existe, tipagem de tipo "ou"
+    def __init__(self):  # type union
+        self.cliente: Pessoa | None = None
 
-
-    def inserir(self, pessoa : Pessoa) -> bool:
-        if self.pessoa != None:
-            print("já tem pesosa na moto!")
-            return True
-        self.pessoa = pessoa
-        return False
+    def inserir(self, cliente: Pessoa) -> bool:
+        if self.cliente != None:
+            print("moto ocupada")
+            return False
+        self.cliente = cliente
+        return True
 
     def remover(self) -> Pessoa | None:
-        aux = self.pessoa
-        self.pessoa = None
+        if self.cliente == None:
+            print("moto vazia")
+            return None
+        aux: Pessoa = self.cliente
+        self.cliente = None
         return aux
 
-def main():
-    moto = Moto()
+    def __str__(self):
+        return f"moto: {self.cliente}"
 
-    while True:
-        line = input()
-        print("$" + line)
-        args = line.split(" ")
 
-        if args[0] == "end ":
-            break
-        if args[0] == "show":
-            print(moto)
-        if args[0] == "enter"
+moto = Moto()
+jose = Pessoa("jose")  # 500
+moto.inserir(jose)
+saiu = moto.remover()  # 500
+print(saiu == jose)  # True
