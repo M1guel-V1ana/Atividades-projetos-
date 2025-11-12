@@ -1,4 +1,4 @@
-class Calculadora:
+ class Calculadora:
     def __init__(self, batteryMax : int):
         self.batteryMax : int = batteryMax
         self.battery : int = 0

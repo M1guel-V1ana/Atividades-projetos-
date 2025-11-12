@@ -18,14 +18,15 @@ print('fim, cabou...')
 import time
 for c in range(10,0, -1):
    print(c)
-   time.sleep(1)
+   time.sleep(5)
 print('fogos vão estourar...')
-time.sleep(1)
+time.sleep(5)
 print('BOOOOOM!')
-'''
+print("processo finallizado")
 '''
 import time
 for c in range(0,51 ,2):
    print(c)
    time.sleep(0.75)
 print('fim')
+'''
