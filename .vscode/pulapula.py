@@ -72,7 +72,6 @@ def main():
         elif args[0] == "arrive":
             n = args[1]
             a = int(args[2])
-
             pular.arrive(Kid(n, a))
         elif args[0] == "enter":
             pular.enter()

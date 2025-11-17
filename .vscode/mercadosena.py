@@ -26,7 +26,7 @@ class Market:
         if self.espera == []:
             print("fail: sem clinetes")
             return
-        if self.caixas[index] is not None:+
+        if self.caixas[index] is not None:
             print("fail: caixa ocupado")
             return
         self.caixas[index] = self.espera.pop(0)
