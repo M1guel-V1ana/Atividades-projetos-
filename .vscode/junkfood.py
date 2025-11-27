@@ -23,8 +23,6 @@ class Slot:
         return f"[  {self.name}: {self.quantity} U : {self.price:.2f} R$]"
 
 
-
-
 class VendingMachine:
     def __init__(self, capacity: int):
         self.slots: list[Slot] = [Slot() for _ in range(capacity)] # lista com os slots de comida
