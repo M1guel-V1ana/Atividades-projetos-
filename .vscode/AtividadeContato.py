@@ -30,7 +30,7 @@ class Contat:
         fone = Fone(id, number)
 
         if fone.isValid():
-            self.__fones.append(fone)  # print("fail: invalid number")
+            self.__fones.append(fone)
         if not fone.isValid():
             print("fail: invalid number")
             return
